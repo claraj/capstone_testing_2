@@ -81,13 +81,13 @@ class TestTimeSheet(TestCase):
     
     @patch('timesheets.alert')
     def test_alert_meet_min_hours_doesnt_meet(self, mock_alert):
-        timesheets.check_meet_min_hours(12, 30)
+        timesheets.alert_not_meet_min_hours(12, 30)
         mock_alert.assert_called_once()
 
 
     @patch('timesheets.alert')
     def test_alert_meet_min_hours_exceed(self, mock_alert):
-        timesheets.check_meet_min_hours(45, 30)
+        timesheets.alert_not_meet_min_hours(45, 30)
         mock_alert.assert_not_called()
 
 
