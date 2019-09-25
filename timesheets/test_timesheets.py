@@ -33,16 +33,6 @@ class TestTimeSheet(TestCase):
     """ Mock the get_hours_for_day function 
     and return predetermined numbers"""
 
-    # @patch('timesheets.get_hours_for_day')
-    # def test_get_hours(self, mock_get_hours):
-    #     mock_hours = [5, 7, 9]
-    #     mock_get_hours.side_effect = mock_hours
-    #     days = ['m', 't', 'w']
-    #     expected_hours = dict(zip(days, mock_hours))        
-    #     hours = timesheets.get_hours(days)
-    #     self.assertDictEqual(expected_hours, hours)
-
-
     @patch('timesheets.get_hours_for_day', side_effect=[5, 7, 9])
     def test_get_hours(self, mock_get_hours):
         days = ['m', 't', 'w']
