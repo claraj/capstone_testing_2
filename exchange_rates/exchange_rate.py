@@ -47,7 +47,6 @@ def request_rates(currency):
 
 def extract_rate(rates, currency):
     """ Process the JSON response from the API, extract rate data. TODO add error handling  """
-    print(rates, currency)
     return rates['rates'][currency]
 
 
