@@ -46,7 +46,7 @@ class TestTimeSheet(TestCase):
 
     @patch('builtins.print')
     def test_display_hours(self, mock_print):
-        example = {'M':3, 'T': 12, 'W': 8.5}
+        example = {'M': 3, 'T': 12, 'W': 8.5}
 
         expected_table_calls = [
             call('Day            Hours Worked   '),
@@ -59,10 +59,10 @@ class TestTimeSheet(TestCase):
         mock_print.assert_has_calls(expected_table_calls)
 
 
-    """ This is an easy function to test - no mocking needed """
+    """ This is an easy function to test - no mocking needed! """
     
     def test_total_hours(self):
-        example = {'M':3, 'T': 12, 'W': 8}  # total = 23
+        example = {'M': 3, 'T': 12, 'W': 8}  # total = 23
         total = timesheets.total_hours(example)
         self.assertEqual(23, total)
 
