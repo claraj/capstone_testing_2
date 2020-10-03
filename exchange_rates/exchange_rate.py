@@ -1,6 +1,7 @@
 """ Uses exchangeratesapi.io to get exchange rates
 Validation, error handling omitted for clarity.  """
 
+
 import requests
 
 def main():
@@ -9,7 +10,6 @@ def main():
     converted = convert_dollars_to_target(dollars, currency)
     display_result(dollars, currency, converted)
 
-""" User input functions """
     
 def get_target_currency():
     """ Get target currency, and return as uppercase symbol. 
